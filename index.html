@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인공지능 기초, 함께 배워볼까요?</title>
+
+  <style>
+    /* 전체 색상과 기본 글꼴 */
+    :root {
+      --sky: #eaf6ff;
+      --blue: #2878b8;
+      --dark-blue: #17476b;
+      --text: #263746;
+      --muted: #536879;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 36px 18px;
+      background: var(--sky);
+      color: var(--text);
+      font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    main {
+      width: min(900px, 100%);
+      margin: 0 auto;
+    }
+
+    .hero,
+    .section {
+      padding: 30px;
+      background: var(--white);
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(44, 103, 145, 0.08);
+    }
+
+    .hero {
+      margin-bottom: 20px;
+      padding: 42px 34px;
+      text-align: center;
+      border-top: 8px solid #75c5ec;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--blue);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--dark-blue);
+      font-size: clamp(30px, 6vw, 46px);
+      line-height: 1.3;
+    }
+
+    .intro {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 20px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      color: var(--dark-blue);
+      font-size: 25px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.3em;
+    }
+
+    li {
+      margin: 7px 0;
+      padding-left: 3px;
+    }
+
+    li::marker {
+      color: var(--blue);
+    }
+
+    /* 활동 사진: 데스크톱에서는 3장 나란히, 휴대폰에서는 한 장씩 */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .photo-card {
+      overflow: hidden;
+      margin: 0;
+      background: #f4faff;
+      border: 1px solid #dceef9;
+      border-radius: 14px;
+    }
+
+    .photo-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #e5f2fa;
+    }
+
+    .photo-card figcaption {
+      padding: 10px 12px;
+      color: var(--dark-blue);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .note {
+      color: var(--muted);
+    }
+
+    @media (max-width: 650px) {
+      body {
+        padding: 18px 12px;
+        font-size: 17px;
+      }
+
+      .hero,
+      .section {
+        padding: 24px 20px;
+        border-radius: 16px;
+      }
+
+      .hero {
+        padding-top: 32px;
+        padding-bottom: 32px;
+      }
+
+      .intro {
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header class="hero">
+      <p class="eyebrow">선택과목 미리보기</p>
+      <h1>인공지능 기초,<br>함께 배워볼까요?</h1>
+      <p class="intro">생활 속 인공지능을 이해하고 직접 체험하는 수업입니다.</p>
+    </header>
+
+    <section class="section">
+      <h2>과목 소개</h2>
+      <ul>
+        <li>인공지능의 기본 원리를 배웁니다.</li>
+        <li>데이터를 활용하고 인공지능으로 문제를 해결하는 방법을 알아봅니다.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>수업 활동 미리보기</h2>
+      <ul>
+        <li>생활 속 인공지능 사례 찾기</li>
+        <li>간단한 인공지능 모델 만들기</li>
+        <li>인공지능을 활용한 프로젝트 진행하기</li>
+      </ul>
+
+      <div class="photo-grid" style="margin-top: 22px;">
+        <!-- 사진을 바꾸려면 아래 data-base의 photo1, photo2, photo3을 수정하세요. -->
+        <figure class="photo-card">
+          <img data-base="photo1" alt="인공지능 체험 활동 사진">
+          <figcaption>인공지능 체험</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img data-base="photo2" alt="모둠 프로젝트 활동 사진">
+          <figcaption>모둠 프로젝트</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img data-base="photo3" alt="결과 발표 활동 사진">
+          <figcaption>결과 발표</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>이런 학생에게 추천해요</h2>
+      <ul>
+        <li>인공지능과 새로운 기술이 궁금한 학생</li>
+        <li>직접 만들고 체험하는 활동을 좋아하는 학생</li>
+        <li>기술을 활용해 문제를 해결해보고 싶은 학생</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>수강 전 알아두기</h2>
+      <ul class="note">
+        <li>코딩을 처음 접하는 학생도 참여할 수 있습니다.</li>
+        <li>실습과 프로젝트 중심으로 수업합니다.</li>
+        <li>평가 방법은 수업 시작 시 안내합니다.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    // photo1, photo2, photo3의 jpg, jpeg, png 파일을 차례로 찾아 불러옵니다.
+    // 사진 이름을 바꾸려면 위쪽 img 태그의 data-base 값을 수정하세요.
+    const extensions = ["jpg", "jpeg", "png"];
+
+    document.querySelectorAll(".photo-card img").forEach((img) => {
+      const baseName = img.dataset.base;
+      let extensionIndex = 0;
+
+      function tryNextExtension() {
+        if (extensionIndex >= extensions.length) {
+          // 해당 이름의 사진이 없으면 사진 카드만 숨깁니다.
+          img.closest(".photo-card").hidden = true;
+          return;
+        }
+
+        img.onerror = tryNextExtension;
+        img.src = `${baseName}.${extensions[extensionIndex]}`;
+        extensionIndex += 1;
+      }
+
+      tryNextExtension();
+    });
+  </script>
+</body>
+</html>
